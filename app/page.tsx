@@ -245,7 +245,8 @@ export default function PortfolioPage() {
               <ArrowUpRight className="h-5 w-5" />
             </a>
             <a 
-              href="#contact" 
+              href="/cv-erick-izquierdo.pdf"
+              download="CV-Erick-Izquierdo-Hernandez.pdf"
               className="inline-flex items-center gap-2 px-8 py-4 rounded-full border border-border text-foreground hover:bg-secondary transition-colors"
             >
               <Download className="h-5 w-5" />
