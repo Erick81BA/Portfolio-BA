@@ -12,9 +12,16 @@ import {
   FileSpreadsheet, 
   Linkedin, 
   Mail, 
-  Github,
+  Phone,
+  MapPin,
   ArrowUpRight,
-  ChevronDown
+  ChevronDown,
+  Users,
+  MessageSquare,
+  Lightbulb,
+  Award,
+  GraduationCap,
+  Code
 } from "lucide-react"
 
 export default function PortfolioPage() {
@@ -66,7 +73,6 @@ export default function PortfolioPage() {
           </defs>
 
           <g>
-            {/* Animated threads */}
             <path
               id="thread1"
               d="M50 720 Q200 590 350 540 Q500 490 650 520 Q800 550 950 460 Q1100 370 1200 340"
@@ -130,13 +136,14 @@ export default function PortfolioPage() {
       <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-background/80 border-b border-border">
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <span className="text-lg font-semibold text-foreground">Tu Nombre</span>
-            <span className="text-sm text-muted-foreground">Business Analyst</span>
+            <span className="text-lg font-semibold text-foreground">Erick Izquierdo</span>
+            <span className="text-sm text-muted-foreground hidden sm:inline">Business Analyst & Líder Técnico</span>
           </div>
           <nav className="hidden md:flex items-center gap-8">
-            <a href="#about" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Acerca de</a>
+            <a href="#about" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Perfil</a>
+            <a href="#skills" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Habilidades</a>
             <a href="#experience" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Experiencia</a>
-            <a href="#projects" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Proyectos</a>
+            <a href="#education" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Educación</a>
             <a href="#contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Contacto</a>
           </nav>
           <ThemeToggle />
@@ -146,17 +153,17 @@ export default function PortfolioPage() {
       {/* Hero Section */}
       <section className="min-h-screen flex items-center justify-center pt-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <p className="text-sm uppercase tracking-widest text-primary mb-4">Business Analyst</p>
+          <p className="text-sm uppercase tracking-widest text-primary mb-4">Business Analyst & Líder Técnico</p>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 text-balance">
             <LineShadowText shadowColor={shadowColor}>
-              Transformando Datos
+              Erick Izquierdo
             </LineShadowText>
             <br />
-            <span className="text-muted-foreground">en Decisiones Estratégicas</span>
+            <span className="text-muted-foreground">Hernández</span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
-            Especialista en análisis de negocios, visualización de datos y optimización de procesos. 
-            Convirtiendo información compleja en insights accionables.
+            Profesional con más de 10 años de experiencia en análisis, diseño y desarrollo de software.
+            Experto en gestión de proyectos ágiles y desarrollo de soluciones tecnológicas.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <ShimmerButton
@@ -164,7 +171,7 @@ export default function PortfolioPage() {
               background="hsl(var(--primary))"
               className="text-primary-foreground font-medium"
             >
-              Ver Proyectos
+              <a href="#experience">Ver Experiencia</a>
             </ShimmerButton>
             <a 
               href="#contact" 
@@ -181,153 +188,304 @@ export default function PortfolioPage() {
 
       {/* About Section */}
       <section id="about" className="py-24 px-6">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-          <div>
-            <p className="text-sm uppercase tracking-widest text-primary mb-4">Acerca de mí</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              Analista de Negocios con enfoque en resultados
-            </h2>
-            <div className="space-y-4 text-muted-foreground leading-relaxed">
-              <p>
-                Profesional con experiencia en el análisis de datos, modelado de procesos de negocio 
-                y desarrollo de soluciones estratégicas basadas en datos.
+        <div className="max-w-6xl mx-auto">
+          <p className="text-sm uppercase tracking-widest text-primary mb-4">Perfil Profesional</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8">
+            Acerca de mí
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="md:col-span-2">
+              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                Profesional con más de 10 años de experiencia en análisis, diseño y desarrollo de software, 
+                especializado en análisis de negocios TI. Experto en gestión de proyectos ágiles y desarrollo 
+                de soluciones tecnológicas, con sólida experiencia en la coordinación entre equipos técnicos 
+                y stakeholders.
               </p>
-              <p>
-                Mi enfoque combina habilidades técnicas en herramientas de análisis con una comprensión 
-                profunda de las necesidades del negocio para entregar valor medible.
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Destaca por su capacidad de liderazgo, visión innovadora y habilidad para entregar 
+                soluciones integrales en entornos multidisciplinarios.
               </p>
+            </div>
+            <div className="space-y-4">
+              <div className="flex items-center gap-3 text-muted-foreground">
+                <MapPin className="h-5 w-5 text-primary" />
+                <span>Zapopan, Jalisco</span>
+              </div>
+              <div className="flex items-center gap-3 text-muted-foreground">
+                <Mail className="h-5 w-5 text-primary" />
+                <span>izquierdo.herick@gmail.com</span>
+              </div>
+              <div className="flex items-center gap-3 text-muted-foreground">
+                <Phone className="h-5 w-5 text-primary" />
+                <span>33 2506 1550</span>
+              </div>
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-4">
-            <div className="p-6 rounded-xl bg-card border border-border hover:border-primary/50 transition-colors">
-              <BarChart3 className="h-8 w-8 text-primary mb-4" />
-              <h3 className="font-semibold text-foreground mb-2">Análisis de Datos</h3>
-              <p className="text-sm text-muted-foreground">SQL, Python, Excel avanzado</p>
+        </div>
+      </section>
+
+      {/* Skills Section */}
+      <section id="skills" className="py-24 px-6 bg-secondary/30">
+        <div className="max-w-6xl mx-auto">
+          <p className="text-sm uppercase tracking-widest text-primary mb-4">Competencias</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-12">
+            Habilidades
+          </h2>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Technical Skills */}
+            <div className="space-y-6">
+              <h3 className="text-xl font-semibold text-foreground flex items-center gap-2">
+                <Code className="h-5 w-5 text-primary" />
+                Técnicas
+              </h3>
+              <div className="space-y-4">
+                <div className="p-4 rounded-xl bg-card border border-border hover:border-primary/50 transition-colors">
+                  <div className="flex items-center gap-3">
+                    <BarChart3 className="h-6 w-6 text-primary" />
+                    <span className="font-medium text-foreground">Metodologías Ágiles (SCRUM)</span>
+                  </div>
+                </div>
+                <div className="p-4 rounded-xl bg-card border border-border hover:border-primary/50 transition-colors">
+                  <div className="flex items-center gap-3">
+                    <TrendingUp className="h-6 w-6 text-primary" />
+                    <span className="font-medium text-foreground">Análisis de Negocios</span>
+                  </div>
+                </div>
+                <div className="p-4 rounded-xl bg-card border border-border hover:border-primary/50 transition-colors">
+                  <div className="flex items-center gap-3">
+                    <FileSpreadsheet className="h-6 w-6 text-primary" />
+                    <span className="font-medium text-foreground">Gestión de Proyectos</span>
+                  </div>
+                </div>
+                <div className="p-4 rounded-xl bg-card border border-border hover:border-primary/50 transition-colors">
+                  <div className="flex items-center gap-3">
+                    <Database className="h-6 w-6 text-primary" />
+                    <span className="font-medium text-foreground">SQL y Bases de Datos</span>
+                  </div>
+                </div>
+                <div className="p-4 rounded-xl bg-card border border-border hover:border-primary/50 transition-colors">
+                  <div className="flex items-center gap-3">
+                    <Code className="h-6 w-6 text-primary" />
+                    <span className="font-medium text-foreground">Desarrollo .NET</span>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="p-6 rounded-xl bg-card border border-border hover:border-primary/50 transition-colors">
-              <TrendingUp className="h-8 w-8 text-primary mb-4" />
-              <h3 className="font-semibold text-foreground mb-2">Visualización</h3>
-              <p className="text-sm text-muted-foreground">Power BI, Tableau, Looker</p>
+
+            {/* Soft Skills */}
+            <div className="space-y-6">
+              <h3 className="text-xl font-semibold text-foreground flex items-center gap-2">
+                <Users className="h-5 w-5 text-primary" />
+                Blandas
+              </h3>
+              <div className="space-y-4">
+                <div className="p-4 rounded-xl bg-card border border-border hover:border-primary/50 transition-colors">
+                  <div className="flex items-center gap-3">
+                    <MessageSquare className="h-6 w-6 text-primary" />
+                    <span className="font-medium text-foreground">Comunicación Asertiva</span>
+                  </div>
+                </div>
+                <div className="p-4 rounded-xl bg-card border border-border hover:border-primary/50 transition-colors">
+                  <div className="flex items-center gap-3">
+                    <Users className="h-6 w-6 text-primary" />
+                    <span className="font-medium text-foreground">Liderazgo de Equipos</span>
+                  </div>
+                </div>
+                <div className="p-4 rounded-xl bg-card border border-border hover:border-primary/50 transition-colors">
+                  <div className="flex items-center gap-3">
+                    <Lightbulb className="h-6 w-6 text-primary" />
+                    <span className="font-medium text-foreground">Resolución de Problemas</span>
+                  </div>
+                </div>
+                <div className="p-4 rounded-xl bg-card border border-border hover:border-primary/50 transition-colors">
+                  <div className="flex items-center gap-3">
+                    <TrendingUp className="h-6 w-6 text-primary" />
+                    <span className="font-medium text-foreground">Negociación</span>
+                  </div>
+                </div>
+                <div className="p-4 rounded-xl bg-card border border-border hover:border-primary/50 transition-colors">
+                  <div className="flex items-center gap-3">
+                    <Users className="h-6 w-6 text-primary" />
+                    <span className="font-medium text-foreground">Inteligencia Emocional</span>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="p-6 rounded-xl bg-card border border-border hover:border-primary/50 transition-colors">
-              <Database className="h-8 w-8 text-primary mb-4" />
-              <h3 className="font-semibold text-foreground mb-2">Base de Datos</h3>
-              <p className="text-sm text-muted-foreground">MySQL, PostgreSQL, MongoDB</p>
-            </div>
-            <div className="p-6 rounded-xl bg-card border border-border hover:border-primary/50 transition-colors">
-              <FileSpreadsheet className="h-8 w-8 text-primary mb-4" />
-              <h3 className="font-semibold text-foreground mb-2">Documentación</h3>
-              <p className="text-sm text-muted-foreground">BPMN, UML, Casos de Uso</p>
+
+            {/* Languages */}
+            <div className="space-y-6">
+              <h3 className="text-xl font-semibold text-foreground flex items-center gap-2">
+                <MessageSquare className="h-5 w-5 text-primary" />
+                Idiomas
+              </h3>
+              <div className="p-6 rounded-xl bg-card border border-border">
+                <h4 className="font-medium text-foreground mb-4">Inglés - Nivel B1</h4>
+                <div className="space-y-3">
+                  <div>
+                    <div className="flex justify-between text-sm mb-1">
+                      <span className="text-muted-foreground">Escrito</span>
+                      <span className="text-primary">70%</span>
+                    </div>
+                    <div className="h-2 bg-secondary rounded-full overflow-hidden">
+                      <div className="h-full bg-primary rounded-full" style={{ width: "70%" }} />
+                    </div>
+                  </div>
+                  <div>
+                    <div className="flex justify-between text-sm mb-1">
+                      <span className="text-muted-foreground">Oral</span>
+                      <span className="text-primary">70%</span>
+                    </div>
+                    <div className="h-2 bg-secondary rounded-full overflow-hidden">
+                      <div className="h-full bg-primary rounded-full" style={{ width: "70%" }} />
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Experience Section */}
-      <section id="experience" className="py-24 px-6 bg-secondary/30">
+      <section id="experience" className="py-24 px-6">
         <div className="max-w-4xl mx-auto">
-          <p className="text-sm uppercase tracking-widest text-primary mb-4">Experiencia</p>
+          <p className="text-sm uppercase tracking-widest text-primary mb-4">Trayectoria</p>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-12">
-            Trayectoria Profesional
+            Experiencia Profesional
           </h2>
           <div className="space-y-8">
-            <div className="relative pl-8 border-l-2 border-border hover:border-primary transition-colors">
+            <div className="relative pl-8 border-l-2 border-primary">
               <div className="absolute -left-2 top-0 w-4 h-4 rounded-full bg-primary" />
               <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
-                <h3 className="font-semibold text-foreground text-lg">Senior Business Analyst</h3>
-                <span className="text-sm text-muted-foreground">2022 - Presente</span>
-              </div>
-              <p className="text-primary mb-2">Empresa Ejemplo S.A.</p>
-              <p className="text-muted-foreground text-sm">
-                Liderazgo en proyectos de transformación digital, análisis de requerimientos y 
-                desarrollo de dashboards ejecutivos para la toma de decisiones.
-              </p>
-            </div>
-            <div className="relative pl-8 border-l-2 border-border hover:border-primary transition-colors">
-              <div className="absolute -left-2 top-0 w-4 h-4 rounded-full bg-muted-foreground" />
-              <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
                 <h3 className="font-semibold text-foreground text-lg">Business Analyst</h3>
-                <span className="text-sm text-muted-foreground">2019 - 2022</span>
+                <span className="text-sm text-muted-foreground">2020 - Presente</span>
               </div>
-              <p className="text-primary mb-2">Consultoría Tech</p>
-              <p className="text-muted-foreground text-sm">
-                Análisis de procesos de negocio, documentación de requerimientos funcionales y 
-                coordinación con equipos de desarrollo para implementación de soluciones.
-              </p>
+              <p className="text-primary mb-3">Apymsa-Exodus</p>
+              <ul className="space-y-2 text-muted-foreground text-sm">
+                <li className="flex items-start gap-2">
+                  <span className="text-primary mt-1">•</span>
+                  Liderazgo en análisis y diseño de iniciativas para áreas de operaciones, incluyendo cadena de suministro y operaciones retail
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-primary mt-1">•</span>
+                  Facilitación de comunicación entre stakeholders y equipos técnicos para optimización de procesos críticos
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-primary mt-1">•</span>
+                  Implementación exitosa de metodologías ágiles y tradicionales en múltiples proyectos empresariales
+                </li>
+              </ul>
             </div>
+
             <div className="relative pl-8 border-l-2 border-border hover:border-primary transition-colors">
               <div className="absolute -left-2 top-0 w-4 h-4 rounded-full bg-muted-foreground" />
               <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
-                <h3 className="font-semibold text-foreground text-lg">Data Analyst Jr.</h3>
-                <span className="text-sm text-muted-foreground">2017 - 2019</span>
+                <h3 className="font-semibold text-foreground text-lg">Líder Técnico</h3>
+                <span className="text-sm text-muted-foreground">2018 - 2020</span>
               </div>
-              <p className="text-primary mb-2">StartUp Innovadora</p>
-              <p className="text-muted-foreground text-sm">
-                Desarrollo de reportes analíticos, limpieza y transformación de datos, y 
-                soporte en la implementación de herramientas de BI.
-              </p>
+              <p className="text-primary mb-3">Apymsa-Exodus</p>
+              <ul className="space-y-2 text-muted-foreground text-sm">
+                <li className="flex items-start gap-2">
+                  <span className="text-primary mt-1">•</span>
+                  Gestión de equipos de desarrollo para proyectos operativos de alto impacto
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-primary mt-1">•</span>
+                  Liderazgo en contratación y desarrollo de talento técnico especializado
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-primary mt-1">•</span>
+                  Implementación y optimización de metodologías ágiles (SCRUM) en equipos multidisciplinarios
+                </li>
+              </ul>
+            </div>
+
+            <div className="relative pl-8 border-l-2 border-border hover:border-primary transition-colors">
+              <div className="absolute -left-2 top-0 w-4 h-4 rounded-full bg-muted-foreground" />
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
+                <h3 className="font-semibold text-foreground text-lg">Desarrollador de Software</h3>
+                <span className="text-sm text-muted-foreground">2014 - 2018</span>
+              </div>
+              <p className="text-primary mb-3">Apymsa-Exodus</p>
+              <ul className="space-y-2 text-muted-foreground text-sm">
+                <li className="flex items-start gap-2">
+                  <span className="text-primary mt-1">•</span>
+                  Desarrollo de aplicaciones empresariales críticas en C# y Visual Basic.Net
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-primary mt-1">•</span>
+                  Gestión y optimización de bases de datos SQL y SQLite para mejora de rendimiento
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-primary mt-1">•</span>
+                  Implementación exitosa de soluciones para optimización de procesos en almacenes y CEDIS
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Projects Section */}
-      <section id="projects" className="py-24 px-6">
-        <div className="max-w-6xl mx-auto">
-          <p className="text-sm uppercase tracking-widest text-primary mb-4">Proyectos</p>
+      {/* Education Section */}
+      <section id="education" className="py-24 px-6 bg-secondary/30">
+        <div className="max-w-4xl mx-auto">
+          <p className="text-sm uppercase tracking-widest text-primary mb-4">Formación</p>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-12">
-            Trabajos Destacados
+            Educación y Certificaciones
           </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="group p-6 rounded-xl bg-card border border-border hover:border-primary/50 transition-all hover:shadow-lg">
-              <div className="h-40 rounded-lg bg-secondary/50 mb-4 flex items-center justify-center">
-                <BarChart3 className="h-12 w-12 text-muted-foreground group-hover:text-primary transition-colors" />
+          
+          {/* Education */}
+          <div className="mb-12">
+            <h3 className="text-xl font-semibold text-foreground mb-6 flex items-center gap-2">
+              <GraduationCap className="h-5 w-5 text-primary" />
+              Formación Académica
+            </h3>
+            <div className="space-y-6">
+              <div className="p-6 rounded-xl bg-card border border-border">
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
+                  <h4 className="font-semibold text-foreground">Maestría en Ingeniería de Software y Sistemas de Información</h4>
+                  <span className="text-sm text-primary">2024 - 2025</span>
+                </div>
+                <p className="text-muted-foreground">Tech Universidad (En curso)</p>
               </div>
-              <h3 className="font-semibold text-foreground mb-2 flex items-center gap-2">
-                Dashboard de Ventas
-                <ArrowUpRight className="h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity" />
-              </h3>
-              <p className="text-sm text-muted-foreground mb-4">
-                Sistema de visualización en tiempo real para el seguimiento de KPIs comerciales.
-              </p>
-              <div className="flex flex-wrap gap-2">
-                <span className="text-xs px-2 py-1 rounded-full bg-secondary text-secondary-foreground">Power BI</span>
-                <span className="text-xs px-2 py-1 rounded-full bg-secondary text-secondary-foreground">SQL</span>
-                <span className="text-xs px-2 py-1 rounded-full bg-secondary text-secondary-foreground">DAX</span>
-              </div>
-            </div>
-            <div className="group p-6 rounded-xl bg-card border border-border hover:border-primary/50 transition-all hover:shadow-lg">
-              <div className="h-40 rounded-lg bg-secondary/50 mb-4 flex items-center justify-center">
-                <TrendingUp className="h-12 w-12 text-muted-foreground group-hover:text-primary transition-colors" />
-              </div>
-              <h3 className="font-semibold text-foreground mb-2 flex items-center gap-2">
-                Modelo Predictivo
-                <ArrowUpRight className="h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity" />
-              </h3>
-              <p className="text-sm text-muted-foreground mb-4">
-                Desarrollo de modelo ML para predicción de churn de clientes con 85% de precisión.
-              </p>
-              <div className="flex flex-wrap gap-2">
-                <span className="text-xs px-2 py-1 rounded-full bg-secondary text-secondary-foreground">Python</span>
-                <span className="text-xs px-2 py-1 rounded-full bg-secondary text-secondary-foreground">Scikit-learn</span>
-                <span className="text-xs px-2 py-1 rounded-full bg-secondary text-secondary-foreground">Pandas</span>
+              <div className="p-6 rounded-xl bg-card border border-border">
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
+                  <h4 className="font-semibold text-foreground">Ingeniería en Sistemas Computacionales</h4>
+                  <span className="text-sm text-primary">1999 - 2004</span>
+                </div>
+                <p className="text-muted-foreground">Instituto Tecnológico de Morelia</p>
+                <p className="text-sm text-primary mt-1">Promedio: 88.4</p>
               </div>
             </div>
-            <div className="group p-6 rounded-xl bg-card border border-border hover:border-primary/50 transition-all hover:shadow-lg">
-              <div className="h-40 rounded-lg bg-secondary/50 mb-4 flex items-center justify-center">
-                <FileSpreadsheet className="h-12 w-12 text-muted-foreground group-hover:text-primary transition-colors" />
+          </div>
+
+          {/* Certifications */}
+          <div>
+            <h3 className="text-xl font-semibold text-foreground mb-6 flex items-center gap-2">
+              <Award className="h-5 w-5 text-primary" />
+              Certificaciones y Cursos
+            </h3>
+            <div className="grid md:grid-cols-2 gap-4">
+              <div className="p-4 rounded-xl bg-card border border-border hover:border-primary/50 transition-colors">
+                <h4 className="font-medium text-foreground mb-1">Generative AI for Business Analysts</h4>
+                <p className="text-sm text-muted-foreground">LinkedIn Learning</p>
               </div>
-              <h3 className="font-semibold text-foreground mb-2 flex items-center gap-2">
-                Automatización de Procesos
-                <ArrowUpRight className="h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity" />
-              </h3>
-              <p className="text-sm text-muted-foreground mb-4">
-                Implementación de RPA para reducir tiempos de procesamiento en un 60%.
-              </p>
-              <div className="flex flex-wrap gap-2">
-                <span className="text-xs px-2 py-1 rounded-full bg-secondary text-secondary-foreground">UiPath</span>
-                <span className="text-xs px-2 py-1 rounded-full bg-secondary text-secondary-foreground">VBA</span>
-                <span className="text-xs px-2 py-1 rounded-full bg-secondary text-secondary-foreground">BPMN</span>
+              <div className="p-4 rounded-xl bg-card border border-border hover:border-primary/50 transition-colors">
+                <h4 className="font-medium text-foreground mb-1">Agile Product Owner Role: Foundations</h4>
+                <p className="text-sm text-muted-foreground">LinkedIn Learning</p>
+              </div>
+              <div className="p-4 rounded-xl bg-card border border-border hover:border-primary/50 transition-colors">
+                <h4 className="font-medium text-foreground mb-1">Foundations of Project Management</h4>
+                <p className="text-sm text-muted-foreground">Google - Coursera</p>
+              </div>
+              <div className="p-4 rounded-xl bg-card border border-border hover:border-primary/50 transition-colors">
+                <h4 className="font-medium text-foreground mb-1">Agile Project Management</h4>
+                <p className="text-sm text-muted-foreground">Google - Coursera</p>
+              </div>
+              <div className="p-4 rounded-xl bg-card border border-border hover:border-primary/50 transition-colors md:col-span-2">
+                <h4 className="font-medium text-foreground mb-1">CENEVAL EGEL-ICO</h4>
+                <p className="text-sm text-muted-foreground">Puntuación: 1132/1300</p>
               </div>
             </div>
           </div>
@@ -335,23 +493,30 @@ export default function PortfolioPage() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-24 px-6 bg-secondary/30">
+      <section id="contact" className="py-24 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-sm uppercase tracking-widest text-primary mb-4">Contacto</p>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
             Trabajemos Juntos
           </h2>
           <p className="text-muted-foreground mb-10 max-w-xl mx-auto">
-            ¿Tienes un proyecto en mente o necesitas apoyo con análisis de datos? 
+            ¿Tienes un proyecto en mente o buscas un Business Analyst con experiencia? 
             Me encantaría escucharte.
           </p>
           <div className="flex items-center justify-center gap-6">
             <a 
-              href="mailto:tu@email.com" 
+              href="mailto:izquierdo.herick@gmail.com" 
               className="p-4 rounded-full bg-card border border-border hover:border-primary hover:text-primary transition-colors"
               aria-label="Email"
             >
               <Mail className="h-6 w-6" />
+            </a>
+            <a 
+              href="tel:+523325061550" 
+              className="p-4 rounded-full bg-card border border-border hover:border-primary hover:text-primary transition-colors"
+              aria-label="Teléfono"
+            >
+              <Phone className="h-6 w-6" />
             </a>
             <a 
               href="https://linkedin.com" 
@@ -362,15 +527,6 @@ export default function PortfolioPage() {
             >
               <Linkedin className="h-6 w-6" />
             </a>
-            <a 
-              href="https://github.com" 
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-4 rounded-full bg-card border border-border hover:border-primary hover:text-primary transition-colors"
-              aria-label="GitHub"
-            >
-              <Github className="h-6 w-6" />
-            </a>
           </div>
         </div>
       </section>
@@ -379,10 +535,10 @@ export default function PortfolioPage() {
       <footer className="py-8 px-6 border-t border-border">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-muted-foreground">
-            © 2026 Tu Nombre. Todos los derechos reservados.
+            © 2026 Erick Izquierdo Hernández. Todos los derechos reservados.
           </p>
           <p className="text-sm text-muted-foreground">
-            Diseñado con precisión analítica
+            Business Analyst & Líder Técnico
           </p>
         </div>
       </footer>
