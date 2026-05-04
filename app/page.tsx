@@ -196,14 +196,21 @@ export default function PortfolioPage() {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="md:col-span-2">
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                Profesional con más de 10 años de experiencia en análisis, diseño y desarrollo de software, 
-                especializado en análisis de negocios TI. Experto en gestión de proyectos ágiles y desarrollo 
-                de soluciones tecnológicas, con sólida experiencia en la coordinación entre equipos técnicos 
-                y stakeholders.
+                Con más de 5 años de experiencia profesional en mi rol actual como Analista Técnico de Negocio 
+                en APYMSA, esto me ha permitido especializarme en la gestión ágil de proyectos y el mapeo de 
+                procesos, habilidades que he desarrollado y perfeccionado desde mis inicios como desarrollador 
+                de software en la misma compañía.
+              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                En APYMSA, colaboro estrechamente con equipos multidisciplinarios para facilitar sprints de 
+                diseño y proporcionar soporte de help desk, contribuyendo a la eficiencia y la innovación de 
+                nuestros servicios.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Destaca por su capacidad de liderazgo, visión innovadora y habilidad para entregar 
-                soluciones integrales en entornos multidisciplinarios.
+                Mi competencia central radica en la capacidad de entender y traducir necesidades técnicas en 
+                soluciones prácticas alineadas con la misión y cultura de nuestra organización. Estoy comprometido 
+                con el aporte de perspectivas diversas y experiencias enriquecedoras al equipo, siempre con el 
+                objetivo de alcanzar la excelencia en cada proyecto encomendado.
               </p>
             </div>
             <div className="space-y-4">
