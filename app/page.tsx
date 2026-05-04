@@ -197,19 +197,28 @@ export default function PortfolioPage() {
           {mobileMenuOpen && (
             <nav className="md:hidden mt-4 pb-4 border-t border-border pt-4">
               <div className="flex flex-col gap-4">
-                {navLinks.map((link) => (
-                  <a 
-                    key={link.href}
-                    href={link.href} 
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    {link.label}
-                  </a>
-                ))}
-              </div>
-            </nav>
-          )}
+            {navLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                onClick={() => setMobileMenuOpen(false)}
+                className="text-muted-foreground hover:text-primary transition-colors"
+              >
+                {link.label}
+              </a>
+            ))}
+            <a
+              href="/cv-erick-izquierdo.pdf"
+              download="CV-Erick-Izquierdo-Hernandez.pdf"
+              onClick={() => setMobileMenuOpen(false)}
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors w-fit"
+            >
+              <Download className="h-4 w-4" />
+              Descargar CV
+            </a>
+            </div>
+          </nav>
+        )}
         </div>
       </header>
 
