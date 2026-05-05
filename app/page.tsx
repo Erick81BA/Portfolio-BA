@@ -2,6 +2,7 @@
 
 import { ThemeToggle } from "@/components/theme-toggle"
 import { useEffect, useState } from "react"
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ""
 import { 
   BarChart3, 
   TrendingUp, 
@@ -30,7 +31,7 @@ import {
   Layers,
   GitBranch
 } from "lucide-react"
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ""
+
 export default function PortfolioPage() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
