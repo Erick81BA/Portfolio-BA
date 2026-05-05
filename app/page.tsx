@@ -2,6 +2,8 @@
 
 import { ThemeToggle } from "@/components/theme-toggle"
 import { useEffect, useState } from "react"
+
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ""
 import { 
   BarChart3, 
   TrendingUp, 
@@ -208,7 +210,7 @@ export default function PortfolioPage() {
               </a>
             ))}
             <a
-              href="/cv-erick-izquierdo.pdf"
+              href={`${basePath}/cv-erick-izquierdo.pdf`}
               download="CV-Erick-Izquierdo-Hernandez.pdf"
               onClick={() => setMobileMenuOpen(false)}
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors w-fit"
@@ -254,7 +256,7 @@ export default function PortfolioPage() {
               <ArrowUpRight className="h-5 w-5" />
             </a>
             <a 
-              href="/cv-erick-izquierdo.pdf"
+              href={`${basePath}/cv-erick-izquierdo.pdf`}
               download="CV-Erick-Izquierdo-Hernandez.pdf"
               className="inline-flex items-center gap-2 px-8 py-4 rounded-full border border-border text-foreground hover:bg-secondary transition-colors"
             >
