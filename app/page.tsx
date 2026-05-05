@@ -30,7 +30,9 @@ import {
   Layers,
   GitBranch
 } from "lucide-react"
+
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ""
+
 export default function PortfolioPage() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
